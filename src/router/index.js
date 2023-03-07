@@ -23,7 +23,7 @@ router.beforeEach((to, from, next) => {
     const isAuthenticationRequired = to.meta.layout === LAYOUT_AUTH; 
     const isAuthenticated = true;
 
-    if (isAuthenticated && isAuthenticationRequired)
+    if (!isAuthenticated && isAuthenticationRequired)
         next({ name: 'login' });
     else
         next();

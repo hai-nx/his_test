@@ -1,12 +1,20 @@
 <template>
-    <h1>Default layout..</h1>
-    <slot></slot>
+    <div class="app">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'DefaultLayout',
-    methods: {
+    components: {
     },
 }
 </script>
+
+<style scoped>
+.app {
+    display: flex;
+}
+
+</style>
