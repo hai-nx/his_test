@@ -27,3 +27,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Bootstrap 5
 npm install --save bootstrap
 npm install --save @popperjs/core
+npm i bootstrap-icons
