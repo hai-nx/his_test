@@ -83,6 +83,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
     name: 'LoginPage',
     data() {
@@ -101,26 +103,58 @@ export default {
             }
         }
     },
+    created () {
+        //storez.auth.logout();
+        //this.logout();
+    },
+    computed: {
+        //...mapState('auth', ['status'])
+    },
     methods: {
+        ...mapActions('auth', ['login', 'logout']),
+
         validate () {
+            let isValid = true;
             this.errors = {
                 username: '',
                 password: ''
             };
+
             if (!this.user.username) {
                 this.errors.username = 'Tên đăng nhập không được bỏ trống!';
+                isValid = false;
             }
             if (!this.user.password) {
                 this.errors.password = 'Mật khẩu không được bỏ trống!';
+                isValid = false;
             }
+
+            return isValid;
         },
         onSubmit () {
-            
-            this.validate()
-            console.log(this.user);
-            console.log(this.errors);
-            {
-                this.$router.push('dashboard')
+            if (this.validate()) {
+
+                console.log(this.user.username)
+                console.log(this.user.password)
+
+                //this.submited = true;
+                const { username, password } = {
+                    username: this.user.username,
+                    password: this.user.password
+                };
+
+                if (this.login)
+                console.log('this.login')
+
+                
+                // storez.state.auth.login({ 
+                //     username: this.user.username, 
+                //     password: this.user.password
+                // });
+
+                this.login({ username, password });
+
+                // this.$router.push({ name: 'dashboard'});
             }
         },
         onSubmitForgotPassword () {

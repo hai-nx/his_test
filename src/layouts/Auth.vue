@@ -14,10 +14,30 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSystem" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hệ thống</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownSystem">
+                            <li><a class="dropdown-item" href="#">Giao diện</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Vài trò và quyền hạn</a></li>
+                            <li><a class="dropdown-item" href="#">Quản lý người dùng</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Tùy chọn</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDictionary" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownDictionary">
+                            <li><a class="dropdown-item" href="#">Chi nhánh</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <!-- <li><a class="dropdown-item" href="#">Quản lý người dùng</a></li> -->
+                            <!-- <li><a class="dropdown-item" href="#">Vài trò và quyền hạn</a></li> -->
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <!-- <li><a class="dropdown-item" href="#">Tùy chọn</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Chứng từ</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -25,7 +45,7 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Báo cáo</a></li>
                 </ul>
 
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
@@ -34,30 +54,17 @@
                             <img src="../assets/logo.png" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy"/>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                            <li><a class="dropdown-item" href="#">My profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Cài đặt</a></li> -->
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
                         </ul>
                     </li>
                 </ul>
-
-                <!-- <div class="d-flex align-items-center">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy"/>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                            <li><a class="dropdown-item" href="#">My profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </div>
-                </div> -->
             </div>
         </div>
     </nav>
+    
     <slot></slot>
 </template>
 
