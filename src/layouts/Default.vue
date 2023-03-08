@@ -1,4 +1,5 @@
 <template>
+    <h1>DEFAULTTTTTTT</h1>
     <div class="app">
         <slot></slot>
     </div>
