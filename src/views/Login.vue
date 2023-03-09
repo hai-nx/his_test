@@ -104,14 +104,13 @@ export default {
         }
     },
     created () {
-        //storez.auth.logout();
-        //this.logout();
+
     },
     computed: {
         //...mapState('auth', ['status'])
     },
     methods: {
-        ...mapActions('auth', ['login', 'logout']),
+        ...mapActions('auth', ['login']),
 
         validate () {
             let isValid = true;
@@ -138,21 +137,17 @@ export default {
                 console.log(this.user.password)
 
                 //this.submited = true;
-                const { username, password } = {
+                const payload = {
                     username: this.user.username,
                     password: this.user.password
                 };
 
-                if (this.login)
-                console.log('this.login')
+                this.login(payload)
 
-                
-                // storez.state.auth.login({ 
-                //     username: this.user.username, 
-                //     password: this.user.password
-                // });
+                this.$router.push({ name: 'dashboard'})
 
-                this.login({ username, password });
+                //this.$store.dispatch('auth.login', payload)
+                // this.login({ username, password });
 
                 // this.$router.push({ name: 'dashboard'});
             }
