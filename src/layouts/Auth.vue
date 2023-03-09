@@ -37,8 +37,8 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Chứng từ</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBusiness" role="button" data-bs-toggle="dropdown" aria-expanded="false">Chứng từ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownBusiness">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -50,8 +50,8 @@
 
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                     <li class="nav-item dropdown">
-                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/logo.png" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy"/>
+                        <a class="dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/logo.png" class="rounded-circle" height="25" alt="The logo" loading="lazy"/>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                             <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
@@ -79,3 +79,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.dropdown-menu {
+  margin: 0 !important;
+}
+</style>
