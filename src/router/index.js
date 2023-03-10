@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from '../store'
 import { LAYOUT_AUTH, LAYOUT_DEFAULT } from '../constants'
 
 import HomePage from '../views/Home.vue'
@@ -21,7 +22,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     // chuyển đến trang đăng nhập nếu chưa được login
     const isAuthenticationRequired = to.meta.layout === LAYOUT_AUTH; 
-    const isAuthenticated = true;
+    const isAuthenticated = store.getters['auth/getAuthenticated'];
 
     if (!isAuthenticated && isAuthenticationRequired)
         next({ name: 'login' });
