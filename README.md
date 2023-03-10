@@ -31,4 +31,4 @@ npm i bootstrap-icons
 
 
 ### Axios
-npm i vue-axios
+npm i vue-axios axios
