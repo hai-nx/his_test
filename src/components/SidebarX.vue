@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <aside :class="`${ is_expanded && 'is-expanded' }`">
         <div class="logo">
             <img src="../assets/logo.png" alt="logo">
@@ -72,8 +72,6 @@
 </template>
 
 <script>
-// import { ref } from 'vue'
-// const is_expanded = ref(false)
 
 export default {
     name: 'VSidebar',
@@ -152,4 +150,4 @@ aside {
 } */
 
 
-</style>
+</style> -->

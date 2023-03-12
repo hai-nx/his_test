@@ -1,4 +1,4 @@
-import { authService } from '../../services/auth-service';
+import { authService } from '@/services/auth-service';
 
 const auth = {
     namespaced: true,
@@ -11,6 +11,9 @@ const auth = {
     getters: {
         getAuthenticated(state) {
             return state.isAuthenticated;
+        },
+        getUser(state) {
+            return state.user;
         }
     },
     mutations: {
