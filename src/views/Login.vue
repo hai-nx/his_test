@@ -104,13 +104,13 @@ export default {
         }
     },
     created () {
-
+        this.logout();
     },
     computed: {
         //...mapState('auth', ['status'])
     },
     methods: {
-        ...mapActions('auth', ['login']),
+        ...mapActions('auth', ['login', 'logout']),
 
         validate () {
             let isValid = true;
@@ -142,14 +142,8 @@ export default {
                     password: this.user.password
                 };
 
-                this.login(payload)
-
-                this.$router.push({ name: 'dashboard'})
-
-                //this.$store.dispatch('auth.login', payload)
-                // this.login({ username, password });
-
-                // this.$router.push({ name: 'dashboard'});
+                this.login(payload);
+                this.$router.push({ name: 'dashboard'});
             }
         },
         onSubmitForgotPassword () {
