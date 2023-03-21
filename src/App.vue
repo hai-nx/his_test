@@ -22,14 +22,27 @@ export default {
 </script>
 
 <style>
+
+:root {
+    --his-background-color: #F0F1F1;
+    
+    --his-sidebar-background-color: #182537;
+    --his-sidebar-expanded-width: 250px;
+    --his-sidebar-collapsed-width: 50px;
+}
+
 main {
     min-height: 100vh;
     width: 100%;
 }
 
 #app {
-    background-color: #F8F9F9;
-    height: 100vh;
+    background-color: var(--his-background-color);
+    min-height: fit-conten
+}
+
+.his-bg {
+    background-color: var(--his-background-color);
 }
 
 
